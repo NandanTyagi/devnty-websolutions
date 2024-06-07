@@ -42,7 +42,7 @@ export default function NextUiNavbar() {
     
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className={` ${showMenu ? "flex": "hidden"} fixed top-0 z-50  w-full bg-white p-2 shadow-md md:p-6`}
+      className={` ${showMenu ? "flex": "hidden"} fixed z-50  w-full bg-white p-2 shadow-md md:p-6`}
     >
       <NavbarContent>
         <NavbarBrand>
@@ -102,7 +102,7 @@ export default function NextUiNavbar() {
           />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="flex gap-6 text-center w-full p-6 text-white">
+      <NavbarMenu className="flex gap-6 text-center w-full h-svh p-6 pt-[56px] text-white">
       <div className="absolute top-[-20px] bottom-0 left-0 right-0 bg-black z-0 opacity-90"></div>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
