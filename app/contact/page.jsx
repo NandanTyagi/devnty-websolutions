@@ -2,7 +2,7 @@ const ContactPage = () => {
   return (
     <main className="page flex h-screen min-h-screen flex-col items-center justify-evenly p-4">
       <div className="card">
-        <h1 className="mb-6 text-2xl font-bold">Contact DEVNTY Websolutions</h1>
+        <h1 className="heading mb-6 text-2xl font-bold">Contact DEVNTY Websolutions</h1>
         <h2 className="mb-6 text-xl">
           We are here to help you with your digital transformation.
         </h2>
