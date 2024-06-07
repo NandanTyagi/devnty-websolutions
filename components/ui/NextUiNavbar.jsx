@@ -102,7 +102,7 @@ export default function NextUiNavbar() {
           />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="flex gap-6 text-center w-full h-svh p-6 pt-[56px] text-white">
+      <NavbarMenu className="flex gap-6 text-center w-full h-svh p-6 pt-[80px] text-white">
       <div className="absolute top-[-20px] bottom-0 left-0 right-0 bg-black z-0 opacity-90"></div>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
