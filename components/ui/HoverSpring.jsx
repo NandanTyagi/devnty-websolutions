@@ -76,6 +76,7 @@ const HoverSpring = () => {
               rel="noopener noreferrer"
               href={project.link}
               className="flex"
+              key={project.id}
             >
               <motion.div
                 whileHover={{
@@ -85,7 +86,7 @@ const HoverSpring = () => {
                   type: "spring",
                   bounce: 0.7,
                 }}
-                key={project.id}
+                
                 className="mt-5 min-w-[100%] rounded-lg border border-gray-200 bg-white p-4 text-left shadow-md hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
               >
                 <Image

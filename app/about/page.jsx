@@ -12,7 +12,7 @@ const AboutPage = () => {
             At DEVNTY Websolutions, our mission is to transform ideas into
             impactful digital experiences. We strive to leverage the latest in
             AI and web technologies to create applications that not only meet
-            our clients' needs but also exceed their expectations.
+            our clients&apos; needs but also exceed their expectations.
           </p>
         </section>
         <section className="card">
