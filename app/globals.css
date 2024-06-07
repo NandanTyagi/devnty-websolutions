@@ -16,6 +16,10 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+
+  h2 {
+    color: rgb(107 114 128);
+  }
 }
 
 body {
