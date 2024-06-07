@@ -40,9 +40,13 @@ export default function IntroExperience() {
             fixed={true}
             visible={false}
         > */}
-      <Center ref={textGroupRef} position-z={0} position-x={0}>
-        <group>
-          <Text3D
+      <Center ref={textGroupRef} position-z={0} position-x={0} position-y={1}>
+        <group >
+          <mesh position-y={3.5} position-x={2.75} scale={2}>
+            <boxGeometry />
+            <meshStandardMaterial color="#ffffff" map={logoTexture} />
+          </mesh>
+          {/* <Text3D
             position-y={1.7}
             position-x={1.4}
             font="./fonts/Crimson Pro Light_Regular.json"
@@ -76,7 +80,7 @@ export default function IntroExperience() {
           >
             <meshMatcapMaterial matcap={matcapTexture} />
             WEBSOLUTIONS
-          </Text3D>
+          </Text3D> */}
         </group>
       </Center>
       {/* </PivotControls> */}

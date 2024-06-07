@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import {
   Navbar,
@@ -20,24 +20,29 @@ export default function NextUiNavbar() {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
 
-  const menuItems = [
-    "Enter",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
+  const menuItems = ["Solutions", "About", "Contact"];
+
+  const handeShowMenu = () => {
+    setShowMenu(false);
+    setTimeout(() => {
+      setShowMenu(true);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    //Wait 4 seconds to render the navbar if the pathname is root
+    if (pathname === "/") {
+    handeShowMenu();
+    }
+  }, [pathname, showMenu]);
 
   return (
+    
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className={`${pathname !== "/" ? "flex" : "hidden"} p-2 md:p-6`}
+      className={` ${showMenu ? "flex": "hidden"} fixed top-0 z-50  w-full bg-white p-2 shadow-md md:p-6`}
     >
       <NavbarContent>
         <NavbarBrand>
@@ -67,39 +72,38 @@ export default function NextUiNavbar() {
           <Link href="about">About</Link>
         </NavbarItem>
         <NavbarItem className="hidden md:flex">
-          <Link href="/partners">Partners</Link>
-        </NavbarItem>
-        <NavbarItem className="hidden md:flex">
           <Link href="/contact">Contact</Link>
         </NavbarItem>
         <NavbarItem className="">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="md:hidden"
-            icon={(isMenuOpen) => (
-              isMenuOpen?<Image
-                src="/devnty-logo-new.svg"
-                alt="Logo"
-                width={80}
-                height={80}
-                priority
-                style={{ width: "40px", height: "auto" }}
-                
-              />:
-              <Image
-                src="/devnty-logo.svg"
-                alt="Logo"
-                width={80}
-                height={80}
-                priority
-                style={{ width: "40px", height: "auto" }}
-                
-              />
-            )}
+            className="p-1 md:hidden"
+            icon={(isMenuOpen) =>
+              isMenuOpen ? (
+                <Image
+                  src="/hamburger-opend.svg"
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                  priority
+                  style={{ width: "26px", height: "auto" }}
+                />
+              ) : (
+                <Image
+                  src="/hamburger-closed.svg"
+                  alt="Logo"
+                  width={80}
+                  height={80}
+                  priority
+                  style={{ width: "26px", height: "auto" }}
+                />
+              )
+            }
           />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="flex gap-6 text-center">
+      <NavbarMenu className="flex gap-6 text-center w-full p-6 text-white">
+      <div className="absolute top-[-20px] bottom-0 left-0 right-0 bg-black z-0 opacity-90"></div>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link

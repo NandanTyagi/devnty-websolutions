@@ -1,91 +1,102 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ProjectsData = [
   {
     id: 1,
-    name: 'Aurastudios.io',
-    description: 'Ready-to-use UI elements designed for rapid development.',
-    link: 'https://syntaxui.com',
-    image: 'https://ansubkhan.com/images/projects/syntaxUI.svg',
+    name: "Aurastudios.io",
+    description:
+      "We design and build web applications with integrated AI tools for education and creative flows.",
+    link: "https://www.aurastudios.io",
+    image: "/logos/aurastudios-logo.svg",
   },
   {
     id: 2,
-    name: 'Streaker.ai',
-    description: 'A curated collection of portfolios for inspiration.',
-    link: 'https://prettyfolio.com',
-    image: 'https://ansubkhan.com/images/projects/prettyfolio.png',
-  },
-  {
-    id: 2,
-    name: 'Auralearning.se',
-    description: 'A vibrant theme for Visual Studio Code.',
-    link: 'https://enchant.ansubkhan.com',
-    image: 'https://ansubkhan.com/images/projects/enchant.png',
+    name: "Streaker.ai",
+    description: "Track the things you want to track. Simple, easy, and free.",
+    link: "https://www.streaker.ai",
+    image: "/logos/streaker-logo.svg",
   },
   {
     id: 3,
-    name: 'Mnsmzn.org',
-    description: 'My personal website, blogs and newsletter.',
-    link: 'https://ansubkhan.com',
-    image: 'https://ansubkhan.com/images/projects/portfolio.png',
+    name: "Auralearning.se",
+    description: "Your pedagogical AI platform.",
+    link: "https://www.auralearning.se",
+    image: "/logos/aura-learning-logo.svg",
   },
   {
     id: 4,
-    name: 'Askthevedas.ai',
-    description: 'Social media, but for sharing quotes.',
-    link: 'https://quote-vault.vercel.app',
-    image: 'https://ansubkhan.com/images/projects/quote-vault.png',
+    name: "Mnsmzn.org",
+    description:
+      "A nonprofit organization dedicated to promote the development and welfare of women, children and elderly in India",
+    link: "https://www.mnsmzn.org",
+    image: "/logos/mns-logo.svg",
   },
   {
     id: 5,
-    name: 'Askthequran.ai',
-    description: 'Social media, but for sharing quotes.',
-    link: 'https://quote-vault.vercel.app',
-    image: 'https://ansubkhan.com/images/projects/quote-vault.png',
+    name: "Askthevedas.ai",
+    description: "Discover the ancient wisdom of the Vedic scriptures.",
+    link: "https://www.askthevedas.ai",
+    image: "/logos/vedas-logo-min.svg",
   },
   {
     id: 6,
-    name: 'Asktheqbible.ai',
-    description: 'Social media, but for sharing quotes.',
-    link: 'https://quote-vault.vercel.app',
-    image: 'https://ansubkhan.com/images/projects/quote-vault.png',
+    name: "Askthequran.ai",
+    description: "Discover the ancient wisdom of the Quran.",
+    link: "https://www.askthequran.ai",
+    image: "/logos/quran-logo.svg",
   },
   {
     id: 7,
-    name: 'Blockpearl.world',
-    description: 'Social media, but for sharing quotes.',
-    link: 'https://quote-vault.vercel.app',
-    image: 'https://ansubkhan.com/images/projects/quote-vault.png',
+    name: "Asktheqbible.ai",
+    description: "Discover the ancient wisdom of the Bible.",
+    link: "https://www.askthebible.ai",
+    image: "/logos/bible-logo.svg",
   },
-]
+  {
+    id: 8,
+    name: "Blockpearl.world",
+    description:
+      "Blockpearl is a decentralized application (dApp) connecting entrepreneurs with social impact investors.",
+    link: "https://blockpearl-web.vercel.app/",
+    image: "/logos/block-pearl-logo.svg",
+  },
+];
 
 const HoverSpring = () => {
   return (
-    <div>
-      <div className="grid w-full grid-cols-2 gap-x-10 md:grid-cols-3">
+    <div className="pb-[100px]">
+      <div className="grid w-full grid-cols-1 gap-x-10 sm:grid-cols-2 md:grid-cols-3">
         {ProjectsData.map((project) => {
           return (
-            <motion.div
-              whileHover={{
-                y: -8,
-              }}
-              transition={{
-                type: 'spring',
-                bounce: 0.7,
-              }}
-              key={project.id}
-              className="mt-5 text-left"
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={project.link}
+              className="flex"
             >
-              <a target="_blank" rel="noopener noreferrer" href={project.link}>
+              <motion.div
+                whileHover={{
+                  y: -8,
+                }}
+                transition={{
+                  type: "spring",
+                  bounce: 0.7,
+                }}
+                key={project.id}
+                className="mt-5 min-w-[100%] rounded-lg border border-gray-200 bg-white p-4 text-left shadow-md hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
+              >
                 <Image
                   src={project.image}
                   width={30}
                   height={30}
                   className="mb-3 rounded-lg border-gray-400 dark:border"
+                  blurDataURL="/spinner.gif"
+                  placeholder="blur"
                   alt={project.name}
+                  priority
                 />
                 <div className="mb-1 text-sm font-medium text-gray-900 dark:text-gray-100">
                   {project.name}
@@ -93,13 +104,13 @@ const HoverSpring = () => {
                 <div className="max-w-[250px] text-sm font-normal text-gray-500 dark:text-gray-500">
                   {project.description}
                 </div>
-              </a>
-            </motion.div>
-          )
+              </motion.div>
+            </a>
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HoverSpring
+export default HoverSpring;

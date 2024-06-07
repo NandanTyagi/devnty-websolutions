@@ -20,6 +20,48 @@
 
 body {
   font-family: "Lato", sans-serif;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.page {
+  max-width: 932px;
+  padding-top: 110px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--background-start-rgb), 1) 0%,
+    rgba(var(--background-end-rgb), 1) 100%
+  );
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.mini {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    90deg,
+    rgb(170, 204, 243) 0%,
+    rgba(190, 195, 200, 1) 100%
+  ) !important;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .sr-only {
@@ -29,5 +71,11 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .page {
+    padding-top: 140px;
   }
 }
