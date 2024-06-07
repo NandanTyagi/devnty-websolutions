@@ -24,7 +24,7 @@ export default function NextUiNavbar() {
 
   const menuItems = ["Solutions", "About", "Contact"];
 
-  const handeShowMenu = () => {
+  const handelShowMenu = () => {
     setShowMenu(false);
     setTimeout(() => {
       setShowMenu(true);
@@ -32,9 +32,9 @@ export default function NextUiNavbar() {
   };
 
   useEffect(() => {
-    //Wait 4 seconds to render the navbar if the pathname is root
+    
     if (pathname === "/") {
-    handeShowMenu();
+    handelShowMenu();
     }
   }, [pathname, showMenu]);
 
