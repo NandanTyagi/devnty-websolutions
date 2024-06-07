@@ -17,7 +17,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 
- h2 .heading {
+ h2, .heading {
     color: rgb(107 114 128);
   }
 }
