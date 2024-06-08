@@ -34,11 +34,11 @@ body {
 }
 
 .card {
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(var(--background-start-rgb), 1) 0%,
     rgba(var(--background-end-rgb), 1) 100%
-  );
+  ); */
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 20px;
@@ -49,12 +49,19 @@ body {
   padding: 10px;
   margin-bottom: 10px;
   background: linear-gradient(
-    90deg,
-    rgb(170, 204, 243) 0%,
-    rgba(190, 195, 200, 1) 100%
+    180deg,
+    rgb(34, 42, 55) 0%,
+    rgb(55, 66, 84) 100%
   ) !important;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini strong {
+  margin-bottom:0.5rem;
 }
 
 .scrolling-wrapper {

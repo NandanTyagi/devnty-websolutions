@@ -86,7 +86,13 @@ const HoverSpring = () => {
                   bounce: 0.7,
                 }}
                 key={project.id}
-                className="mt-5 min-w-[100%] rounded-lg border border-gray-200 bg-white p-4 text-left shadow-md hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
+                className="mt-5 min-w-[100%] rounded-lg border border-gray-700 bg-gray-800 p-4 text-left shadow-md hover:shadow-lg"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring" },
+                }}
               >
                 <Image
                   src={project.image}
@@ -98,7 +104,7 @@ const HoverSpring = () => {
                   alt={project.name}
                   priority
                 />
-                <div className="mb-1 text-sm font-medium text-gray-900 dark:text-gray-100">
+                <div className="mb-1 text-sm font-medium text-gray-100">
                   {project.name}
                 </div>
                 <div className="max-w-[250px] text-sm font-normal text-gray-500 dark:text-gray-500">
