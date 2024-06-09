@@ -7,7 +7,7 @@ const AboutPage = () => {
     whileInView: { opacity: 1, y: 0, transition: { type: "spring" } },
   };
   return (
-    <main className="page flex h-screen min-h-screen flex-col items-center justify-evenly p-4">
+    <main className="page flex min-h-screen flex-col items-center justify-evenly p-4">
       <motion.div
       // initial={{opacity:0}}
       // whileInView={{opacity:1}}

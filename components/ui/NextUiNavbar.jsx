@@ -24,19 +24,19 @@ export default function NextUiNavbar() {
 
   const menuItems = ["Solutions", "About", "Contact"];
 
-  const handelShowMenu = () => {
-    setShowMenu(false);
-    setTimeout(() => {
-      setShowMenu(true);
-    }, 5000);
-  };
+  // const handelShowMenu = () => {
+  //   setShowMenu(false);
+  //   setTimeout(() => {
+  //     setShowMenu(true);
+  //   }, 5000);
+  // };
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    if (pathname === "/") {
-    handelShowMenu();
-    }
-  }, [pathname, showMenu]);
+  //   if (pathname === "/") {
+  //   handelShowMenu();
+  //   }
+  // }, [pathname, showMenu]);
 
   return (
     
@@ -102,7 +102,7 @@ export default function NextUiNavbar() {
           />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="flex gap-6 text-center w-full p-6 text-white z-40 pt-[80px]">
+      <NavbarMenu className="flex gap-6 text-center w-full p-6 text-white z-40 pt-[100px]">
       <div className="absolute top-0 bottom-0 left-0 right-0 bg-black z-0 opacity-90"></div>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
@@ -110,7 +110,7 @@ export default function NextUiNavbar() {
               color={
                 pathname === `/${item.toLowerCase()}` ? "primary" : "foreground"
               }
-              className="w-full"
+              className={`w-full text-2xl ${pathname === `/${item.toLowerCase()}` ? "underline" : ""}`}
               href={`/${item.toLowerCase()}`}
               size="lg"
             >

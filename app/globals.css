@@ -33,8 +33,9 @@ body {
 .page {
   max-width: 932px;
   padding-top: 110px;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
   margin: 0 auto;
+  min-height: 100dvh;
 }
 
 .card {

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="relative flex h-screen flex-col items-center justify-end pb-20">
+    <main className="relative flex h-[100dvh] flex-col items-center justify-end pb-20">
       {/* <div className="logo z-20 flex items-center justify-between text-sm absolute top-8 left-20">
         <Link
           href="/"
