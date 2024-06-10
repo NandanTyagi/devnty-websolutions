@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { usePathname } from "next/navigation";
 import {
   Navbar,
@@ -10,39 +10,22 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link,
-  Button,
+  Link
 } from "@nextui-org/react";
-import Logo from "../Logo";
 import Image from "next/image";
 
 export default function NextUiNavbar() {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showMenu, setShowMenu] = useState(true);
 
   const menuItems = ["Solutions", "About", "Contact"];
-
-  // const handelShowMenu = () => {
-  //   setShowMenu(false);
-  //   setTimeout(() => {
-  //     setShowMenu(true);
-  //   }, 5000);
-  // };
-
-  // useEffect(() => {
-    
-  //   if (pathname === "/") {
-  //   handelShowMenu();
-  //   }
-  // }, [pathname, showMenu]);
 
   return (
     
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className={` ${showMenu ? "flex": "hidden"} fixed top-0 z-50  w-full bg-white p-1 shadow-md md:p-5`}
+      className={`flex fixed top-0 z-50  w-full bg-white p-1 shadow-md md:p-5`}
     >
       <NavbarContent>
         <NavbarBrand>

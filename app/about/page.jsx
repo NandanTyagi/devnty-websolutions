@@ -25,7 +25,12 @@ const AboutPage = () => {
         <div className="">
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0, transition: { type: "spring" } }}
+            whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: false, amount: 0.5 }}
             className="mb-6 text-2xl font-bold"
             // variants={FADE_UP_ANIMATION_VARIANTS}
           >
@@ -34,7 +39,12 @@ const AboutPage = () => {
           <motion.section
             className="card border-gray-700 bg-gray-800"
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0, transition: { type: "spring" } }}
+            whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
           >
             <motion.h2 className="mb-6 text-xl text-gray-100">Our Mission</motion.h2>
             <p className="mb-6 text-gray-400">
@@ -47,7 +57,12 @@ const AboutPage = () => {
           <motion.section
             className="card border-gray-700 bg-gray-800"
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0, transition: { type: "spring" } }}
+            whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
           >
             <h2 className="mb-6 text-xl text-gray-100">Who We Are</h2>
             <p className="mb-6 text-gray-400">
@@ -61,7 +76,12 @@ const AboutPage = () => {
           <motion.section
             className="card border-gray-700 bg-gray-800"
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0, transition: { type: "spring" } }}
+            whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
           >
             <h2 className="mb-6 text-xl text-gray-100">What We Do</h2>
             <p className="mb-6 text-gray-400">
@@ -75,7 +95,12 @@ const AboutPage = () => {
           <motion.section
             className="card border-gray-700 bg-gray-800"
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0, transition: { type: "spring" } }}
+            whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
           >
             <h2 className="mb-6 text-xl text-gray-100">Why Choose Us</h2>
             <div className="scrolling-wrapper">
@@ -84,10 +109,11 @@ const AboutPage = () => {
                   className="mini"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { type: "spring" },
-                  }}
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
                 >
                   <strong className="text-gray-200 ">Innovative Solutions</strong>We combine creativity
                   and technology to develop cutting-edge web applications.
@@ -96,10 +122,11 @@ const AboutPage = () => {
                   className="mini"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { type: "spring" },
-                  }}
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
                 >
                   <strong className="text-gray-200 ">Customization</strong>Each project is tailored to
                   meet the specific needs of our clients.
@@ -108,10 +135,11 @@ const AboutPage = () => {
                   className="mini"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { type: "spring" },
-                  }}
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
                 >
                   <strong className="text-gray-200 ">Expertise</strong>Our team of skilled developers and
                   AI specialists brings extensive experience to every project.
@@ -120,10 +148,11 @@ const AboutPage = () => {
                   className="mini"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { type: "spring" },
-                  }}
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
                 >
                   <strong className="text-gray-200 ">Commitment</strong>We are dedicated to delivering
                   exceptional results and ensuring client satisfaction.
@@ -134,7 +163,12 @@ const AboutPage = () => {
           <motion.section
             className="card border-gray-700 bg-gray-800"
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0, transition: { type: "spring" } }}
+            whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
           >
             <h2 className="mb-6 text-xl text-gray-100">Our Vision</h2>
             <p className="mb-6 text-gray-400">
@@ -148,7 +182,12 @@ const AboutPage = () => {
           <motion.section
             className="card border-gray-700 bg-gray-800"
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0, transition: { type: "spring" } }}
+            whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
           >
             <h2 className="mb-6 text-xl text-gray-100">Get in Touch</h2>
             <p className="mb-6 text-gray-400">

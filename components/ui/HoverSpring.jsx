@@ -6,18 +6,18 @@ import Image from "next/image";
 const ProjectsData = [
   {
     id: 1,
+    name: "Streaker.ai",
+    description: "Track the things you want to track. Simple, easy, and free.",
+    link: "https://www.streaker.ai",
+    image: "/logos/streaker-logo.svg",
+  },
+  {
+    id: 2,
     name: "Aurastudios.io",
     description:
       "We design and build web applications with integrated AI tools for education and creative flows.",
     link: "https://www.aurastudios.io",
     image: "/logos/aurastudios-logo.svg",
-  },
-  {
-    id: 2,
-    name: "Streaker.ai",
-    description: "Track the things you want to track. Simple, easy, and free.",
-    link: "https://www.streaker.ai",
-    image: "/logos/streaker-logo.svg",
   },
   {
     id: 3,
@@ -65,6 +65,61 @@ const ProjectsData = [
   },
 ];
 
+// const HoverSpring = () => {
+//   return (
+//     <div className="mb-[100px]">
+//       <div className="grid w-full grid-cols-1 gap-x-10 sm:grid-cols-2 md:grid-cols-3">
+//         {ProjectsData.map((project) => {
+//           return (
+//             <a
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               href={project.link}
+//               className="flex"
+//               key={project.id}
+//             >
+//               <motion.div
+//                 whileHover={{
+//                   y: -8,
+//                 }}
+//                 transition={{
+//                   type: "spring",
+//                   bounce: 0.7,
+//                 }}
+//                 key={project.id}
+//                 className="mt-5 min-w-[100%] rounded-lg border border-gray-700 bg-gray-800 p-4 text-left shadow-md hover:shadow-lg"
+//                 initial={{ opacity: 0, y: 10 }}
+//                 whileInView={{
+//                   opacity: 1,
+//                   y: 0,
+//                   transition: { type: "spring" },
+//                 }}
+//               >
+//                 <Image
+//                   src={project.image}
+//                   width={30}
+//                   height={30}
+//                   className="mb-3 rounded-lg border-gray-400 dark:border"
+//                   blurDataURL="/spinner.gif"
+//                   placeholder="blur"
+//                   alt={project.name}
+//                   priority
+//                 />
+//                 <div className="mb-1 text-sm font-medium text-gray-100">
+//                   {project.name}
+//                 </div>
+//                 <div className="max-w-[250px] text-sm font-normal text-gray-500 dark:text-gray-500">
+//                   {project.description}
+//                 </div>
+//               </motion.div>
+//             </a>
+//           );
+//         })}
+//       </div>
+//     </div>
+//   );
+// };
+
 const HoverSpring = () => {
   return (
     <div className="mb-[100px]">
@@ -88,12 +143,14 @@ const HoverSpring = () => {
                 }}
                 key={project.id}
                 className="mt-5 min-w-[100%] rounded-lg border border-gray-700 bg-gray-800 p-4 text-left shadow-md hover:shadow-lg"
-                initial={{ opacity: 0, y: 10 }}
+                title={`Click to view ${project.name}`}	
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{
                   opacity: 1,
                   y: 0,
-                  transition: { type: "spring" },
+                  transition: { type: "tween", duration: 1 },
                 }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <Image
                   src={project.image}
