@@ -143,7 +143,7 @@ const HoverSpring = () => {
                 }}
                 key={project.id}
                 className="mt-5 min-w-[100%] rounded-lg border border-gray-700 bg-gray-800 p-4 text-left shadow-md hover:shadow-lg"
-                title={`Click to view ${project.name}`}	
+                title={`Click to view ${project.name}`}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{
                   opacity: 1,

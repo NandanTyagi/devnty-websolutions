@@ -17,17 +17,14 @@
     --background-end-rgb: 0, 0, 0;
   }
 
- h2, .heading {
+  h2,
+  .heading {
     color: rgb(107 114 128);
   }
 }
 
 body {
   font-family: "Lato", sans-serif;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .page {
@@ -39,11 +36,6 @@ body {
 }
 
 .card {
-  /* background: linear-gradient(
-    90deg,
-    rgba(var(--background-start-rgb), 1) 0%,
-    rgba(var(--background-end-rgb), 1) 100%
-  ); */
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 20px;
@@ -66,7 +58,7 @@ body {
 }
 
 .mini strong {
-  margin-bottom:0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .scrolling-wrapper {

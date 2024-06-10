@@ -91,8 +91,6 @@ const ContactPage = () => {
           </motion.div>
         </motion.a>
       </motion.div>
-
-      {/* <ContactForm /> */}
     </main>
   );
 };

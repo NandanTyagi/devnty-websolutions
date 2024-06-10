@@ -31,59 +31,14 @@ export default function IntroExperience() {
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1.5} />
 
-      {/* <PivotControls
-            anchor={[-0.5, -0.5, -0.5]}
-            depthTest={false}
-            lineWidth={4}
-            axisColors={['#ffffff', '#ffffff', '#ffffff']}
-            scale={400}
-            fixed={true}
-            visible={false}
-        > */}
       <Center ref={textGroupRef} position-z={0} position-x={0} position-y={1}>
-        <group >
+        <group>
           <mesh position-y={3.5} position-x={2.75} scale={2}>
             <boxGeometry />
             <meshStandardMaterial color="#ffffff" map={logoTexture} />
           </mesh>
-          {/* <Text3D
-            position-y={1.7}
-            position-x={1.4}
-            font="./fonts/Crimson Pro Light_Regular.json"
-            size={0.6}
-            height={0.2}
-            curveSegments={12}
-            bevelEnabled
-            bevelThickness={0.02}
-            bevelSize={0.02}
-            bevelOffset={0}
-            bevelSegments={5}
-            castShadow
-            ref={textRef}
-          >
-            DEVNTY
-            <meshMatcapMaterial matcap={matcapTexture} />
-          </Text3D>
-          <Text3D
-            position-y={1}
-            position-x={0}
-            font="./fonts/Crimson Pro ExtraLight_Regular.json "
-            size={0.6}
-            height={0.2}
-            curveSegments={12}
-            bevelEnabled
-            bevelThickness={0.02}
-            bevelSize={0.02}
-            bevelOffset={0}
-            bevelSegments={5}
-            castShadow
-          >
-            <meshMatcapMaterial matcap={matcapTexture} />
-            WEBSOLUTIONS
-          </Text3D> */}
         </group>
       </Center>
-      {/* </PivotControls> */}
 
       <mesh
         position-y={-1}

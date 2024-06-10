@@ -1,13 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-
 import HoverSpring from "@/components/ui/HoverSpring";
 
 const EnterPage = () => {
-  const FADE_UP_ANIMATION_VARIANTS = {
-    hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0, transition: { type: "spring" } },
-  };
   return (
     <main className="page flex min-h-screen flex-col items-center justify-evenly p-4">
       <motion.div
@@ -53,7 +48,6 @@ const EnterPage = () => {
         </motion.p>
       </motion.div>
       <HoverSpring />
-      {/* <RippleLoader /> */}
     </main>
   );
 };

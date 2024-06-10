@@ -1,6 +1,6 @@
 "use client";
 
-import { useState} from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import {
   Navbar,
@@ -10,7 +10,7 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link
+  Link,
 } from "@nextui-org/react";
 import Image from "next/image";
 
@@ -22,17 +22,16 @@ export default function NextUiNavbar() {
   const menuItems = ["Solutions", "About", "Contact"];
 
   return (
-    
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className={`flex fixed top-0 z-50  w-full bg-white p-1 shadow-md md:p-5`}
+      className={`fixed top-0 z-50 flex w-full bg-white p-1 shadow-md md:p-5`}
     >
       <NavbarContent>
         <NavbarBrand>
           <div className="logo flex items-center justify-between text-sm">
             <Link
               href="/"
-              className="text-md flex items-center justify-center gap-4 font-semibold text-black md:text-2xl p-1"
+              className="text-md flex items-center justify-center gap-4 p-1 font-semibold text-black md:text-2xl"
             >
               <Image
                 src="/devnty-logo-new.svg"
@@ -49,13 +48,28 @@ export default function NextUiNavbar() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden md:flex">
-          <Link className={`p-1 ${pathname === "/solutions" && "underline"}`}  href="/solutions">Solutions</Link>
+          <Link
+            className={`p-1 ${pathname === "/solutions" && "underline"}`}
+            href="/solutions"
+          >
+            Solutions
+          </Link>
         </NavbarItem>
         <NavbarItem className="hidden md:flex">
-          <Link className={`p-1 ${pathname === "/about" && "underline"}`} href="about">About</Link>
+          <Link
+            className={`p-1 ${pathname === "/about" && "underline"}`}
+            href="about"
+          >
+            About
+          </Link>
         </NavbarItem>
         <NavbarItem className="hidden md:flex">
-          <Link className={`p-1 ${pathname === "/contact" && "underline"}`}  href="/contact">Contact</Link>
+          <Link
+            className={`p-1 ${pathname === "/contact" && "underline"}`}
+            href="/contact"
+          >
+            Contact
+          </Link>
         </NavbarItem>
         <NavbarItem className="">
           <NavbarMenuToggle
@@ -85,8 +99,8 @@ export default function NextUiNavbar() {
           />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="flex gap-6 text-center w-full p-6 text-white z-40 pt-[100px]">
-      <div className="absolute top-0 bottom-0 left-0 right-0 bg-black z-0 opacity-90"></div>
+      <NavbarMenu className="z-40 flex w-full gap-6 p-6 pt-[100px] text-center text-white">
+        <div className="absolute bottom-0 left-0 right-0 top-0 z-0 bg-black opacity-90"></div>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
