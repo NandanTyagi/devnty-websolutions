@@ -32,10 +32,10 @@ const AboutPage = () => {
               Our Mission
             </motion.h2>
             <p className="mb-6 text-gray-400">
-              At DEVNTY Websolutions, our mission is to transform ideas into
-              impactful digital experiences. We strive to leverage the latest in
-              AI and web technologies to create applications that not only meet
-              our clients&apos; needs but also exceed their expectations.
+              At DEVNTY Websolutions, the mission is to transform ideas into
+              impactful digital experiences. Leveraging the latest in AI and web
+              technologies, DEVNTY Websolutions aims to create applications that
+              not only meet clients&apos; needs but also exceed their expectations.
             </p>
           </motion.section>
           <motion.section
@@ -50,11 +50,11 @@ const AboutPage = () => {
           >
             <h2 className="mb-6 text-xl text-gray-100">Who We Are</h2>
             <p className="mb-6 text-gray-400">
-              Founded by a team of passionate developers and innovators, DEVNTY
+              Founded by a passionate developer and innovator, DEVNTY
               Websolutions is dedicated to delivering high-quality, customized
-              web solutions. Our expertise spans a variety of industries,
-              enabling us to craft tailored applications that drive success and
-              growth for our clients.
+              web solutions. With expertise spanning a variety of industries,
+              DEVNTY Websolutions crafts tailored applications that drive
+              success and growth for clients.
             </p>
           </motion.section>
           <motion.section
@@ -69,11 +69,11 @@ const AboutPage = () => {
           >
             <h2 className="mb-6 text-xl text-gray-100">What We Do</h2>
             <p className="mb-6 text-gray-400">
-              We design and build web applications with integrated AI tools to
-              enhance productivity, education, and user engagement. Our
-              solutions range from educational platforms and productivity
-              trackers to unique applications that explore ancient wisdom
-              through modern technology.
+              DEVNTY Websolutions designs and builds web applications with
+              integrated AI tools to enhance productivity, education, and user
+              engagement. The solutions range from educational platforms and
+              productivity trackers to unique applications that explore ancient
+              wisdom through modern technology.
             </p>
           </motion.section>
           <motion.section
@@ -102,7 +102,7 @@ const AboutPage = () => {
                   <strong className="text-gray-200">
                     Innovative Solutions
                   </strong>
-                  We combine creativity and technology to develop cutting-edge
+                  Combining creativity and technology to develop cutting-edge
                   web applications.
                 </motion.li>
                 <motion.li
@@ -116,7 +116,7 @@ const AboutPage = () => {
                   viewport={{ once: true, amount: 0.5 }}
                 >
                   <strong className="text-gray-200">Customization</strong>Each
-                  project is tailored to meet the specific needs of our clients.
+                  project is tailored to meet the specific needs of clients.
                 </motion.li>
                 <motion.li
                   className="mini"
@@ -128,9 +128,9 @@ const AboutPage = () => {
                   }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-                  <strong className="text-gray-200">Expertise</strong>Our team
-                  of skilled developers and AI specialists brings extensive
-                  experience to every project.
+                  <strong className="text-gray-200">Expertise</strong>Bringing
+                  extensive experience and a high level of skill to every
+                  project.
                 </motion.li>
                 <motion.li
                   className="mini"
@@ -142,9 +142,9 @@ const AboutPage = () => {
                   }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-                  <strong className="text-gray-200">Commitment</strong>We are
-                  dedicated to delivering exceptional results and ensuring
-                  client satisfaction.
+                  <strong className="text-gray-200">Commitment</strong>Dedicated
+                  to delivering exceptional results and ensuring client
+                  satisfaction.
                 </motion.li>
               </ul>
             </div>
@@ -161,11 +161,11 @@ const AboutPage = () => {
           >
             <h2 className="mb-6 text-xl text-gray-100">Our Vision</h2>
             <p className="mb-6 text-gray-400">
-              We envision a world where technology seamlessly integrates with
-              everyday life, empowering individuals and businesses to achieve
-              their fullest potential. At DEVNTY Websolutions, we are committed
-              to driving this vision forward through innovation, quality, and
-              excellence.
+              DEVNTY Websolutions envisions a world where technology seamlessly
+              integrates with everyday life, empowering individuals and
+              businesses to achieve their fullest potential. The commitment to
+              driving this vision forward through innovation, quality, and
+              excellence is unwavering.
             </p>
           </motion.section>
           <motion.section
@@ -180,9 +180,10 @@ const AboutPage = () => {
           >
             <h2 className="mb-6 text-xl text-gray-100">Get in Touch</h2>
             <p className="mb-6 text-gray-400">
-              Interested in working with us? <a href="/contact">Contact us</a>{" "}
-              to discuss your project and discover how DEVNTY Websolutions can
-              help bring your ideas to life.
+              Interested in working with DEVNTY Websolutions?{" "}
+              <a href="/contact">Contact</a> to discuss your project and
+              discover how DEVNTY Websolutions can help bring your ideas to
+              life.
             </p>
           </motion.section>
         </div>
