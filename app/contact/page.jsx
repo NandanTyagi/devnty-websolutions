@@ -1,4 +1,5 @@
 "use client";
+import ContactForm from "@/components/ContactForm";
 import { motion } from "framer-motion";
 
 const ContactPage = () => {
@@ -61,22 +62,18 @@ const ContactPage = () => {
           },
         }}
       >
-        <motion.a
-          href="mailto:info@devnty.com"
+        <motion.div
+          className="card border-gray-700 bg-gray-800"
           variants={FADE_UP_ANIMATION_VARIANTS}
+          // whileHover={{
+          //   y: -8,
+          // }}
+          // transition={{
+          //   type: "spring",
+          //   bounce: 0.7,
+          // }}
         >
-          <motion.div
-            className="card border-gray-700 bg-gray-800"
-            variants={FADE_UP_ANIMATION_VARIANTS}
-            whileHover={{
-              y: -8,
-            }}
-            transition={{
-              type: "spring",
-              bounce: 0.7,
-            }}
-          >
-            <motion.h2
+          {/* <motion.h2
               className="mb-6 text-xl text-gray-100"
               variants={FADE_UP_ANIMATION_VARIANTS}
             >
@@ -87,9 +84,9 @@ const ContactPage = () => {
               variants={FADE_UP_ANIMATION_VARIANTS}
             >
               info@devnty.com
-            </motion.p>
-          </motion.div>
-        </motion.a>
+            </motion.p> */}
+          <ContactForm />
+        </motion.div>
       </motion.div>
     </main>
   );
