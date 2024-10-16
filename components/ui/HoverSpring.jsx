@@ -155,9 +155,9 @@ const HoverSpring = () => {
                 whileInView={{
                   opacity: 1,
                   y: 0,
-                  transition: { type: "tween", duration: 0.2 },
+                  transition: { type: "tween", duration: 0.8 },
                 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 <Image
                   src={project.image}
