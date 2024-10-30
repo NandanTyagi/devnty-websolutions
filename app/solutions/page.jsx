@@ -32,8 +32,7 @@ const EnterPage = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0, transition: { type: "spring" } }}
         >
-          At DEVNTY Websolutions, we specialize in creating innovative and
-          tailored web applications that leverage cutting-edge AI technologies.
+          Customized development. Domain-specific AI solutions
         </motion.h2>
         <motion.p
           className="mb-6 text-gray-500"

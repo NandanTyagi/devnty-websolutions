@@ -36,15 +36,22 @@ const ContactPage = () => {
             className="mb-6 text-xl text-gray-200"
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
-            We are here to help you with your digital transformation.
+            Let’s Innovate Together
           </motion.h2>
           <motion.p
             className="mb-6 text-gray-400"
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
-            If you have any questions or would like to discuss a potential
-            project, please do not hesitate to reach out to us. We are looking
-            forward to hearing from you.
+            DEVNTY Websolutions is dedicated to delivering AI-powered
+            applications that address the specific challenges and opportunities
+            within your industry.
+          </motion.p>
+          <motion.p
+            className="mb-6 text-gray-400"
+            variants={FADE_UP_ANIMATION_VARIANTS}
+          >
+            Ready to bring your vision to life? Contact us today to start
+            building.
           </motion.p>
         </motion.div>
       </motion.div>

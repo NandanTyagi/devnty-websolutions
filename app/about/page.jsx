@@ -28,65 +28,7 @@ const AboutPage = () => {
             }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <motion.h2 className="mb-6 text-xl text-gray-100">
-              Our Mission
-            </motion.h2>
-            <p className="mb-6 text-gray-400">
-              At DEVNTY Websolutions, the mission is to transform ideas into
-              impactful digital experiences. Leveraging the latest in AI and web
-              technologies, DEVNTY Websolutions aims to create applications that
-              not only meet clients&apos; needs but also exceed their expectations.
-            </p>
-          </motion.section>
-          <motion.section
-            className="card border-gray-700 bg-gray-800"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { type: "spring", duration: 1 },
-            }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <h2 className="mb-6 text-xl text-gray-100">Who We Are</h2>
-            <p className="mb-6 text-gray-400">
-              Founded by a passionate developer and innovator, DEVNTY
-              Websolutions is dedicated to delivering high-quality, customized
-              web solutions. With expertise spanning a variety of industries,
-              DEVNTY Websolutions crafts tailored applications that drive
-              success and growth for clients.
-            </p>
-          </motion.section>
-          <motion.section
-            className="card border-gray-700 bg-gray-800"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { type: "spring", duration: 1 },
-            }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <h2 className="mb-6 text-xl text-gray-100">What We Do</h2>
-            <p className="mb-6 text-gray-400">
-              DEVNTY Websolutions designs and builds web applications with
-              integrated AI tools to enhance productivity, education, and user
-              engagement. The solutions range from educational platforms and
-              productivity trackers to unique applications that explore ancient
-              wisdom through modern technology.
-            </p>
-          </motion.section>
-          <motion.section
-            className="card border-gray-700 bg-gray-800"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { type: "spring", duration: 1 },
-            }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <h2 className="mb-6 text-xl text-gray-100">Why Choose Us</h2>
+            <h2 className="mb-6 text-xl text-gray-100">Our offer</h2>
             <div className="scrolling-wrapper">
               <ul className="mb-6 text-gray-400 md:flex md:gap-6">
                 <motion.li
@@ -159,13 +101,16 @@ const AboutPage = () => {
             }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <h2 className="mb-6 text-xl text-gray-100">Our Vision</h2>
+            <motion.h2 className="mb-6 text-xl text-gray-100">
+              Domain-Specific AI Applications
+            </motion.h2>
             <p className="mb-6 text-gray-400">
-              DEVNTY Websolutions envisions a world where technology seamlessly
-              integrates with everyday life, empowering individuals and
-              businesses to achieve their fullest potential. The commitment to
-              driving this vision forward through innovation, quality, and
-              excellence is unwavering.
+              Our core strength lies in crafting AI solutions tailored to the
+              nuances of your needs. Whether it&apos;s personalized user
+              journeys in wellness, or intelligent automation in e-commerce, our
+              AI-driven applications are built to add meaningful,
+              business-specific value. We integrate AI that not only adapts to
+              but enhances your operations and user interactions.
             </p>
           </motion.section>
           <motion.section
@@ -178,12 +123,74 @@ const AboutPage = () => {
             }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <h2 className="mb-6 text-xl text-gray-100">Get in Touch</h2>
+            <h2 className="mb-6 text-xl text-gray-100">
+              Full-Stack Development
+            </h2>
             <p className="mb-6 text-gray-400">
-              Interested in working with DEVNTY Websolutions?{" "}
-              <a href="/contact">Contact</a> to discuss your project and
-              discover how DEVNTY Websolutions can help bring your ideas to
-              life.
+              From front-end design to back-end architecture, we build seamless,
+              high-performance applications. Our end-to-end development
+              expertise ensures intuitive, reliable, and scalable experiences
+              that engage users and support your business goals.
+            </p>
+          </motion.section>
+          <motion.section
+            className="card border-gray-700 bg-gray-800"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { type: "spring", duration: 1 },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <h2 className="mb-6 text-xl text-gray-100">
+              Content Management Flexibility
+            </h2>
+            <p className="mb-6 text-gray-400">
+              We utilize an adaptable, high-performance content management
+              system (CMS) designed to integrate securely with complex
+              infrastructures. Our CMS solution enables easy content updates,
+              industry-specific data handling, and intuitive management tools,
+              giving you full control over your content in a secure, compliant
+              framework.
+            </p>
+          </motion.section>
+          <motion.section
+            className="card border-gray-700 bg-gray-800"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { type: "spring", duration: 1 },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <h2 className="mb-6 text-xl text-gray-100">
+              DevOps & Hosting Solutions
+            </h2>
+            <p className="mb-6 text-gray-400">
+              Our technical infrastructure is designed to ensure reliable,
+              secure, and scalable solutions. With continuous integration and
+              delivery (CI/CD) workflows and robust cloud hosting, we provide
+              dependable application performance. Each project’s infrastructure
+              is tailored to meet specific business needs.
+            </p>
+          </motion.section>
+          <motion.section
+            className="card border-gray-700 bg-gray-800"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { type: "spring", duration: 1 },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <h2 className="mb-6 text-xl text-gray-100">GDPR-Ready Solutions</h2>
+            <p className="mb-6 text-gray-400">
+              By securing data management and ensuring transparency, we help you
+              maintain user trust and meet the highest standards of data
+              protection.
             </p>
           </motion.section>
         </div>
