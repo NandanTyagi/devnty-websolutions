@@ -19,7 +19,7 @@ export const postContactForm = async (formData) => {
       from: "nandantyagi@gmail.com",
       to: "info@devnty.com",
       ...generateEmailContent(formData),
-      subject: `MNSMZN ${formData.type} Form Submission`,
+      subject: `DEVNTY ${formData.type} Form Submission`,
     });
     console.log("Email sent successfully");
     return true;
