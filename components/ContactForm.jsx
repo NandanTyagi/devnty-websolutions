@@ -3,9 +3,11 @@ import NextUiInput from "./NextUi/NextUiInput";
 import { ShineButton } from "@/components/ui/ShineButton";
 import NextUiTextarea from "./NextUi/NextUiTextarea";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 // import { postContactForm, postToChamondai } from "@/utils/postForm";
 
 const ContactForm = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -71,7 +73,7 @@ const ContactForm = () => {
         message: "",
         type: "Contact",
       }); // Clear the form
-      location.reload();
+      router.push("/");
     } else {
       alert("Woops! Something went wrong. Please try again later.");
     }
