@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "DEVNTY Websolutions",
-  description: "Webdevelopment and design services",
+  description: "Customized development. Domain-specific AI solutions",
   metadataBase: new URL('https://www.devnty.com/'),
   alternates: {
     canonical: '/',
