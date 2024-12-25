@@ -14,7 +14,7 @@ const ProjectsData = [
   {
     id: 2,
     name: "Streaker.ai",
-    description: "Track the things you want to track. Simple, easy, and free.",
+    description: "Track the things you want to track. Simple and easy!",
     link: "https://www.streaker.ai",
     image: "/logos/streaker-logo.svg",
   },
