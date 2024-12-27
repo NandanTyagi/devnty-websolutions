@@ -22,7 +22,7 @@ const ProjectsData = [
     id: 3,
     name: "Embla.ai",
     description:
-      "is an AI-powered meditation platform that offers personalized meditation guidance tailored to your unique needs and preferences..",
+      "AI-powered meditation platform that offers personalized meditation guidance tailored to your unique needs and preferences..",
     link: "https://www.embla.ai",
     image: "/logos/embla-logo-new-ico-min.png",
   },
