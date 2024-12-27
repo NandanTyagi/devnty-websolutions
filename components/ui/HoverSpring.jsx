@@ -28,6 +28,14 @@ const ProjectsData = [
   },
   {
     id: 4,
+    name: "Sweden AI Roadmap",
+    description:
+      "En AI-modell som svarar på frågor om AI-kommissionens Färdplan för Sverige",
+    link: "https://sweden-ai-roadmap.on.devnty.com",
+    image: "/logos/icon-18x180.png",
+  },
+  {
+    id: 5,
     name: "Aurastudios.io",
     description:
       "We design and build web applications with integrated AI tools for education and creative flows.",
@@ -35,14 +43,14 @@ const ProjectsData = [
     image: "/logos/aurastudios-logo.svg",
   },
   {
-    id: 5,
+    id: 6,
     name: "Auralearning.se",
     description: "Your pedagogical AI platform.",
     link: "https://www.auralearning.se",
     image: "/logos/aura-learning-logo.svg",
   },
   {
-    id: 6,
+    id: 7,
     name: "Mnsmzn.org",
     description:
       "A nonprofit organization dedicated to promote the development and welfare of women, children and elderly in India",
@@ -50,28 +58,28 @@ const ProjectsData = [
     image: "/logos/mns-logo.svg",
   },
   {
-    id: 7,
+    id: 8,
     name: "Askthevedas.ai",
     description: "Discover the ancient wisdom of the Vedic scriptures.",
     link: "https://www.askthevedas.ai",
     image: "/logos/vedas-logo-min.svg",
   },
   {
-    id: 8,
+    id: 9,
     name: "Askthequran.ai",
     description: "Discover the ancient wisdom of the Quran.",
     link: "https://www.askthequran.ai",
     image: "/logos/quran-logo.svg",
   },
   {
-    id: 9,
+    id: 10,
     name: "Asktheqbible.ai",
     description: "Discover the ancient wisdom of the Bible.",
     link: "https://www.askthebible.ai",
     image: "/logos/bible-logo.svg",
   },
   {
-    id: 10,
+    id: 11,
     name: "Blockpearl.world",
     description:
       "Blockpearl is a decentralized application (dApp) connecting entrepreneurs with social impact investors.",
