@@ -20,6 +20,14 @@ const ProjectsData = [
   },
   {
     id: 3,
+    name: "Embla.ai",
+    description:
+      "is an AI-powered meditation platform that offers personalized meditation guidance tailored to your unique needs and preferences..",
+    link: "https://www.embla.ai",
+    image: "/logos/embla-logo-new-ico-min.png",
+  },
+  {
+    id: 4,
     name: "Aurastudios.io",
     description:
       "We design and build web applications with integrated AI tools for education and creative flows.",
@@ -27,14 +35,14 @@ const ProjectsData = [
     image: "/logos/aurastudios-logo.svg",
   },
   {
-    id: 4,
+    id: 5,
     name: "Auralearning.se",
     description: "Your pedagogical AI platform.",
     link: "https://www.auralearning.se",
     image: "/logos/aura-learning-logo.svg",
   },
   {
-    id: 5,
+    id: 6,
     name: "Mnsmzn.org",
     description:
       "A nonprofit organization dedicated to promote the development and welfare of women, children and elderly in India",
@@ -42,28 +50,28 @@ const ProjectsData = [
     image: "/logos/mns-logo.svg",
   },
   {
-    id: 6,
+    id: 7,
     name: "Askthevedas.ai",
     description: "Discover the ancient wisdom of the Vedic scriptures.",
     link: "https://www.askthevedas.ai",
     image: "/logos/vedas-logo-min.svg",
   },
   {
-    id: 7,
+    id: 8,
     name: "Askthequran.ai",
     description: "Discover the ancient wisdom of the Quran.",
     link: "https://www.askthequran.ai",
     image: "/logos/quran-logo.svg",
   },
   {
-    id: 8,
+    id: 9,
     name: "Asktheqbible.ai",
     description: "Discover the ancient wisdom of the Bible.",
     link: "https://www.askthebible.ai",
     image: "/logos/bible-logo.svg",
   },
   {
-    id: 9,
+    id: 10,
     name: "Blockpearl.world",
     description:
       "Blockpearl is a decentralized application (dApp) connecting entrepreneurs with social impact investors.",
