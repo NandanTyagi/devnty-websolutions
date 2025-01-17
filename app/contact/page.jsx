@@ -8,8 +8,9 @@ const ContactPage = () => {
     show: { opacity: 1, y: 0, transition: { type: "spring" } },
   };
   return (
-    <main className="page flex h-screen min-h-screen flex-col items-center justify-evenly p-4">
+    <main className="min-h-screen overflow-scroll  p-4">
       <motion.div
+      className="flex flex-col items-center justify-center mt-[80px] "
         initial="hidden"
         animate="show"
         viewport={{ once: true }}
@@ -23,7 +24,7 @@ const ContactPage = () => {
         }}
       >
         <motion.div
-          className="card border-gray-700 bg-gray-800"
+          className="card border-gray-700 bg-gray-800 sm:mt-0"
           variants={FADE_UP_ANIMATION_VARIANTS}
         >
           <motion.h1
@@ -72,26 +73,7 @@ const ContactPage = () => {
         <motion.div
           className="card border-gray-700 bg-gray-800"
           variants={FADE_UP_ANIMATION_VARIANTS}
-          // whileHover={{
-          //   y: -8,
-          // }}
-          // transition={{
-          //   type: "spring",
-          //   bounce: 0.7,
-          // }}
         >
-          {/* <motion.h2
-              className="mb-6 text-xl text-gray-100"
-              variants={FADE_UP_ANIMATION_VARIANTS}
-            >
-              Email
-            </motion.h2>
-            <motion.p
-              className="mb-6 text-gray-400"
-              variants={FADE_UP_ANIMATION_VARIANTS}
-            >
-              info@devnty.com
-            </motion.p> */}
           <ContactForm />
         </motion.div>
       </motion.div>
