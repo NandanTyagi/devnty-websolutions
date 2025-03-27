@@ -59,6 +59,7 @@ const ContactPage = () => {
 
       <motion.div
         initial="hidden"
+        className="max-w-[1089px] mx-auto"
         animate="show"
         viewport={{ once: true }}
         variants={{
