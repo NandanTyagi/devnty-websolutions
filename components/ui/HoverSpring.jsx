@@ -6,28 +6,37 @@ import Image from "next/image";
 const ProjectsData = [
   {
     id: 1,
+    name: "Borealissummit.com",
+    description:
+      "Borealis Psychedelic Science Summit 2025 is organized by the Swedish Network for Psychedelic Science (NPV Sweden). ",
+    link: "https://borealissummit.com",
+    image: "/logos/borealis-logo.png",
+  },
+  {
+    id: 2,
     name: "Ungtledarskap.se",
-    description: "The King's Foundation Young Leadership works to uplift, develop, and educate young leaders so they can reach their full potential.",
+    description:
+      "The King's Foundation Young Leadership works to uplift, develop, and educate young leaders so they can reach their full potential.",
     link: "https://www.ungtledarskap.se",
     image: "/logos/ksul-logo-centered.svg",
   },
   {
-    id: 2,
+    id: 3,
     name: "Streaker.ai",
     description: "Track the things you want to track. Simple and easy!",
     link: "https://www.streaker.ai",
     image: "/logos/streaker-logo.svg",
   },
   {
-    id: 3,
-    name: "Embla.ai",
+    id: 4,
+    name: "Embla",
     description:
       "AI-powered meditation platform that offers personalized meditation guidance tailored to your unique needs and preferences..",
     link: "https://www.embla.ai",
-    image: "/logos/embla-logo-new-ico-min.png",
+    image: "/logos/favicon-sprout.svg",
   },
   {
-    id: 4,
+    id: 5,
     name: "Sweden AI Roadmap",
     description:
       "En AI-modell som svarar på frågor om AI-kommissionens Färdplan för Sverige",
@@ -35,7 +44,7 @@ const ProjectsData = [
     image: "/logos/icon-18x180.png",
   },
   {
-    id: 5,
+    id: 6,
     name: "Aurastudios.io",
     description:
       "We design and build web applications with integrated AI tools for education and creative flows.",
@@ -43,29 +52,29 @@ const ProjectsData = [
     image: "/logos/aurastudios-logo.svg",
   },
   {
-    id: 6,
+    id: 7,
     name: "Auralearning.se",
     description: "Your pedagogical AI platform.",
     link: "https://www.auralearning.se",
     image: "/logos/aura-learning-logo.svg",
   },
   {
-    id: 7,
+    id: 8,
     name: "Mnsmzn.org",
     description:
       "A nonprofit organization dedicated to promote the development and welfare of women, children and elderly in India",
     link: "https://www.mnsmzn.org",
     image: "/logos/mns-logo.svg",
   },
-  // {
-  //   id: 8,
-  //   name: "Askthevedas.ai",
-  //   description: "Discover the ancient wisdom of the Vedic scriptures.",
-  //   link: "https://www.askthevedas.ai",
-  //   image: "/logos/vedas-logo-min.svg",
-  // },
   {
-    id: 8,
+    id: 9,
+    name: "Askthevedas",
+    description: "Discover the ancient wisdom of the Vedic scriptures.",
+    link: "http://askthevedas.on.devnty.com",
+    image: "/logos/vedas-logo-min.svg",
+  },
+  {
+    id: 10,
     name: "Askthequran.ai",
     description: "Discover the ancient wisdom of the Quran.",
     link: "https://www.askthequran.ai",
