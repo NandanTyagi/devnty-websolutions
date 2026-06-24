@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const ProjectsData = [
-  {
-    id: 1,
-    name: "Borealissummit.com",
-    description:
-      "Borealis Psychedelic Science Summit 2025 is organized by the Swedish Network for Psychedelic Science (NPV Sweden). ",
-    link: "https://borealissummit.com",
-    image: "/logos/borealis-logo.png",
-  },
+  // {
+  //   id: 1,
+  //   name: "Borealissummit.com",
+  //   description:
+  //     "Borealis Psychedelic Science Summit 2025 is organized by the Swedish Network for Psychedelic Science (NPV Sweden). ",
+  //   link: "https://borealissummit.com",
+  //   image: "/logos/borealis-logo.png",
+  // },
   {
     id: 2,
     name: "Ungtledarskap.se",
@@ -20,13 +20,13 @@ const ProjectsData = [
     link: "https://www.ungtledarskap.se",
     image: "/logos/ksul-logo-centered.svg",
   },
-  {
-    id: 3,
-    name: "Streaker.ai",
-    description: "Track the things you want to track. Simple and easy!",
-    link: "https://www.streaker.ai/about",
-    image: "/logos/streaker-logo.svg",
-  },
+  // {
+  //   id: 3,
+  //   name: "Streaker.ai",
+  //   description: "Track the things you want to track. Simple and easy!",
+  //   link: "https://www.streaker.ai/about",
+  //   image: "/logos/streaker-logo.svg",
+  // },
   {
     id: 4,
     name: "Embla",
@@ -35,14 +35,14 @@ const ProjectsData = [
     link: "https://www.embla.ai/about",
     image: "/logos/favicon-sprout.svg",
   },
-  {
-    id: 5,
-    name: "Sweden AI Roadmap",
-    description:
-      "En AI-modell som svarar på frågor om AI-kommissionens Färdplan för Sverige",
-    link: "https://sweden-ai-roadmap.on.devnty.com",
-    image: "/logos/icon-18x180.png",
-  },
+  // {
+  //   id: 5,
+  //   name: "Sweden AI Roadmap",
+  //   description:
+  //     "En AI-modell som svarar på frågor om AI-kommissionens Färdplan för Sverige",
+  //   link: "https://sweden-ai-roadmap.on.devnty.com",
+  //   image: "/logos/icon-18x180.png",
+  // },
   {
     id: 6,
     name: "Aurastudios.io",
@@ -66,13 +66,13 @@ const ProjectsData = [
     link: "https://www.mnsmzn.org",
     image: "/logos/mns-logo.svg",
   },
-  {
-    id: 9,
-    name: "Askthevedas",
-    description: "Discover the ancient wisdom of the Vedic scriptures.",
-    link: "http://askthevedas.on.devnty.com",
-    image: "/logos/vedas-logo-min.svg",
-  },
+  // {
+  //   id: 9,
+  //   name: "Askthevedas",
+  //   description: "Discover the ancient wisdom of the Vedic scriptures.",
+  //   link: "http://askthevedas.on.devnty.com",
+  //   image: "/logos/vedas-logo-min.svg",
+  // },
   {
     id: 10,
     name: "Askthequran.ai",
@@ -87,14 +87,14 @@ const ProjectsData = [
   //   link: "https://www.askthebible.ai",
   //   image: "/logos/bible-logo.svg",
   // },
-  {
-    id: 9,
-    name: "Blockpearl.world",
-    description:
-      "Blockpearl is a decentralized application (dApp) connecting entrepreneurs with social impact investors.",
-    link: "https://blockpearl-web.vercel.app/",
-    image: "/logos/block-pearl-logo.svg",
-  },
+  // {
+  //   id: 9,
+  //   name: "Blockpearl.world",
+  //   description:
+  //     "Blockpearl is a decentralized application (dApp) connecting entrepreneurs with social impact investors.",
+  //   link: "https://blockpearl-web.vercel.app/",
+  //   image: "/logos/block-pearl-logo.svg",
+  // },
 ];
 
 // const HoverSpring = () => {
