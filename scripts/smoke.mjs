@@ -8,7 +8,7 @@ for (const [path, content] of [['/', 'Useful digital'], ['/about', 'Good work st
   console.log(`PASS ${path}`);
 }
 const solutions = await (await fetch(new URL('/solutions', base))).text();
-const urls = ['https://aqtive.se', 'https://www.embla.ai', 'https://www.ungtledarskap.se', 'https://www.streaker.ai', 'https://www.mnsmzn.org', 'https://www.auralearning.se', 'https://www.aurastudios.io'];
+const urls = ['https://aqtive.se', 'https://www.embla.ai', 'https://www.ungtledarskap.se', 'https://streaker-v1.vercel.app', 'https://www.mnsmzn.org', 'https://www.auralearning.se', 'https://www.aurastudios.io'];
 let previous = -1;
 for (const url of urls) {
   const position = solutions.indexOf('href="' + url + '"');
