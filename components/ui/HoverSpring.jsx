@@ -13,21 +13,13 @@ const ProjectsData = [
     image: "/logos/aqtive-icon.svg",
   },
   {
-    id: 3,
-    name: "Streaker.ai",
+    id: 4,
+    name: "Embla",
     description:
-      "A discipline ledger that makes continuity visible. Record your daily actions and see your consistency over time.",
-    link: "https://www.streaker.ai",
-    image: "/logos/streaker-icon.png",
+      "AI-powered meditation platform that offers personalized meditation guidance tailored to your unique needs and preferences..",
+    link: "https://www.embla.ai",
+    image: "/logos/favicon-sprout.svg",
   },
-  // {
-  //   id: 1,
-  //   name: "Borealissummit.com",
-  //   description:
-  //     "Borealis Psychedelic Science Summit 2025 is organized by the Swedish Network for Psychedelic Science (NPV Sweden). ",
-  //   link: "https://borealissummit.com",
-  //   image: "/logos/borealis-logo.png",
-  // },
   {
     id: 2,
     name: "Ungtledarskap.se",
@@ -37,35 +29,12 @@ const ProjectsData = [
     image: "/logos/ksul-logo-centered.svg",
   },
   {
-    id: 4,
-    name: "Embla",
+    id: 3,
+    name: "Streaker.ai",
     description:
-      "AI-powered meditation platform that offers personalized meditation guidance tailored to your unique needs and preferences..",
-    link: "https://www.embla.ai",
-    image: "/logos/favicon-sprout.svg",
-  },
-  // {
-  //   id: 5,
-  //   name: "Sweden AI Roadmap",
-  //   description:
-  //     "En AI-modell som svarar på frågor om AI-kommissionens Färdplan för Sverige",
-  //   link: "https://sweden-ai-roadmap.on.devnty.com",
-  //   image: "/logos/icon-18x180.png",
-  // },
-  {
-    id: 6,
-    name: "Aurastudios.io",
-    description:
-      "We design and build web applications with integrated AI tools for education and creative flows.",
-    link: "https://www.aurastudios.io",
-    image: "/logos/aurastudios-logo.svg",
-  },
-  {
-    id: 7,
-    name: "Auralearning.se",
-    description: "Your pedagogical AI platform.",
-    link: "https://www.auralearning.se",
-    image: "/logos/aura-learning-logo.svg",
+      "A discipline ledger that makes continuity visible. Record your daily actions and see your consistency over time.",
+    link: "https://www.streaker.ai",
+    image: "/logos/streaker-icon.png",
   },
   {
     id: 8,
@@ -75,28 +44,21 @@ const ProjectsData = [
     link: "https://www.mnsmzn.org",
     image: "/logos/mns-logo.svg",
   },
-  // {
-  //   id: 9,
-  //   name: "Askthevedas",
-  //   description: "Discover the ancient wisdom of the Vedic scriptures.",
-  //   link: "http://askthevedas.on.devnty.com",
-  //   image: "/logos/vedas-logo-min.svg",
-  // },
-  // {
-  //   id: 10,
-  //   name: "Asktheqbible.ai",
-  //   description: "Discover the ancient wisdom of the Bible.",
-  //   link: "https://www.askthebible.ai",
-  //   image: "/logos/bible-logo.svg",
-  // },
-  // {
-  //   id: 9,
-  //   name: "Blockpearl.world",
-  //   description:
-  //     "Blockpearl is a decentralized application (dApp) connecting entrepreneurs with social impact investors.",
-  //   link: "https://blockpearl-web.vercel.app/",
-  //   image: "/logos/block-pearl-logo.svg",
-  // },
+  {
+    id: 7,
+    name: "Auralearning.se",
+    description: "Your pedagogical AI platform.",
+    link: "https://www.auralearning.se",
+    image: "/logos/aura-learning-logo.svg",
+  },
+  {
+    id: 6,
+    name: "Aurastudios.io",
+    description:
+      "We design and build web applications with integrated AI tools for education and creative flows.",
+    link: "https://www.aurastudios.io",
+    image: "/logos/aurastudios-logo.svg",
+  },
 ];
 
 // const HoverSpring = () => {
