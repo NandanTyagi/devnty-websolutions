@@ -28,7 +28,8 @@ export default function ContactForm() {
       const result = await response.json().catch(() => ({}));
       if (!response.ok) {
         setState("error");
-        setMessage(response.status === 429 ? "Too many attempts. Please wait a minute before trying again." : result.error || "We couldn’t send your message. Please try again or email info@devnty.com.");
+        const rateLimited = response.status === 429 || (response.status === 403 && result.error?.code === "403");
+        setMessage(rateLimited ? "Too many attempts. Please wait a minute before trying again." : typeof result.error === "string" ? result.error : "We couldn’t send your message. Please try again or email info@devnty.com.");
         return;
       }
       setState("success");
