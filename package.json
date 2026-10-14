@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test:smoke": "node scripts/smoke.mjs",
-    "test:ci": "node scripts/test-ci.mjs"
+    "test:ci": "node scripts/test-ci.mjs",
+    "test:contact": "node --test scripts/contact-validation.test.mjs scripts/contact-handler.test.mjs"
   },
   "engines": {
     "node": "22.x"
@@ -18,6 +19,7 @@
     "@react-three/drei": "^9.50.3",
     "@react-three/fiber": "^8.9.2",
     "@vercel/analytics": "^1.0.2",
+    "botid": "^1.5.11",
     "framer-motion": "^11.2.10",
     "next": "14.2.35",
     "nodemailer": "^6.9.4",

@@ -1,85 +1,10 @@
-"use client";
 import ContactForm from "@/components/ContactForm";
-import { motion } from "framer-motion";
-
-const ContactPage = () => {
-  const FADE_UP_ANIMATION_VARIANTS = {
-    hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0, transition: { type: "spring" } },
-  };
+export const metadata = { title: "Contact", description: "Tell DEVNTY what you would like to build or improve. Start a conversation about a website, web application or practical AI feature.", alternates: { canonical: "/contact" } };
+export default function Contact() {
   return (
-    <main className="min-h-screen overflow-scroll  p-4">
-      <motion.div
-      className="flex flex-col items-center justify-center mt-[80px] "
-        initial="hidden"
-        animate="show"
-        viewport={{ once: true }}
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.15,
-            },
-          },
-        }}
-      >
-        <motion.div
-          className="card border-gray-700 bg-gray-800 sm:mt-0"
-          variants={FADE_UP_ANIMATION_VARIANTS}
-        >
-          <motion.h1
-            className="mb-6 text-2xl font-bold text-gray-100"
-            variants={FADE_UP_ANIMATION_VARIANTS}
-          >
-            Contact us
-          </motion.h1>
-          <motion.h2
-            className="mb-6 text-xl text-gray-200"
-            variants={FADE_UP_ANIMATION_VARIANTS}
-          >
-            Let’s Innovate Together
-          </motion.h2>
-          <motion.p
-            className="mb-6 text-gray-400"
-            variants={FADE_UP_ANIMATION_VARIANTS}
-          >
-            DEVNTY Websolutions is dedicated to delivering AI-powered
-            applications that address the specific challenges and opportunities
-            within your industry.
-          </motion.p>
-          <motion.p
-            className="mb-6 text-gray-400"
-            variants={FADE_UP_ANIMATION_VARIANTS}
-          >
-            Ready to bring your vision to life? Contact us today to start
-            building.
-          </motion.p>
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        initial="hidden"
-        className="max-w-[1089px] mx-auto"
-        animate="show"
-        viewport={{ once: true }}
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.15,
-            },
-          },
-        }}
-      >
-        <motion.div
-          className="card border-gray-700 bg-gray-800"
-          variants={FADE_UP_ANIMATION_VARIANTS}
-        >
-          <ContactForm />
-        </motion.div>
-      </motion.div>
+    <main id="main-content" className="container page-content contact-layout" tabIndex={-1}>
+      <header className="contact-intro"><p className="eyebrow">Start a conversation</p><h1>What are you<br />working on?</h1><p className="lead">A new website, an application or a better way of doing something. Tell us a little about it.</p><div className="contact-direct"><p>Prefer email?</p><a className="text-link" href="mailto:info@devnty.com">info@devnty.com<span aria-hidden="true">↗</span></a></div><p className="contact-guidance">An idea is enough to start. Include only the details needed to discuss your project.</p></header>
+      <div className="form-panel"><ContactForm /></div>
     </main>
   );
-};
-
-export default ContactPage;
+}

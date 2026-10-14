@@ -1,146 +1,59 @@
 "use client";
-import NextUiInput from "./NextUi/NextUiInput";
-import { ShineButton } from "@/components/ui/ShineButton";
-import NextUiTextarea from "./NextUi/NextUiTextarea";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-// import { postContactForm, postToChamondai } from "@/utils/postForm";
+import { useRef, useState } from "react";
 
-const ContactForm = () => {
-  const router = useRouter();
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-    type: "Contact",
-  });
-
-  const postToChamondai = async (formData) => {
-    console.log("Form submitted to Chamondai", formData);
+export default function ContactForm() {
+  const [state, setState] = useState("idle");
+  const [message, setMessage] = useState("");
+  const inFlight = useRef(false);
+  async function submit(event) {
+    event.preventDefault();
+    if (inFlight.current) return;
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+    if (["firstName", "lastName", "email", "message"].some(key => !String(data[key]).trim())) {
+      setState("error");
+      setMessage("Please complete each field before sending.");
+      return;
+    }
+    inFlight.current = true;
+    setState("sending");
+    setMessage("");
     try {
-      const response = await fetch(
-        "/api/v1/form-submit",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        },
-      );
-      const res = await response.json();
-      if (response.ok) {
-        console.log("Submitted to chamondai successfully", res);
-        return true;
-      } else {
-        console.log("Error submitting to chamondai", res);
-        alert("Error in submitting");
-        return false;
+      const response = await fetch("/api/v1/form-submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, type: "Contact" }),
+        signal: AbortSignal.timeout(30000),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        setState("error");
+        const rateLimited = response.status === 429 || (response.status === 403 && result.error?.code === "403");
+        setMessage(rateLimited ? "Too many attempts. Please wait a minute before trying again." : typeof result.error === "string" ? result.error : "We couldn’t send your message. Please try again or email info@devnty.com.");
+        return;
       }
-    } catch (error) {
-      console.error("Error sumitting to chamondai", error);
-      alert("Error in submitting", error);
-      return false;
+      setState("success");
+      setMessage("Thanks — your message has been sent. We’ll reply by email.");
+      form.reset();
+    } catch {
+      setState("error");
+      setMessage("We couldn’t confirm your message was sent. Please try again, or email info@devnty.com.");
+    } finally {
+      inFlight.current = false;
     }
-  };
-
-  const handelFormSubmit = async (e) => {
-    e.preventDefault();
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    console.log("Form submitted", formData);
-    if (
-      !formData.firstName ||
-      !formData.lastName ||
-      !formData.email ||
-      !formData.message
-    ) {
-      alert("Please fill all the fields");
-      return;
-    }
-
-    if (!regex.test(formData.email)) {
-      alert("Please enter a valid email address");
-      return;
-    }
-
-    if (await postToChamondai(formData)) {
-      alert("Success! Thanks for reaching out. We will get back to you soon.");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        message: "",
-        type: "Contact",
-      }); // Clear the form
-      router.push("/");
-    } else {
-      alert("Woops! Something went wrong. Please try again later.");
-    }
-  };
-
+  }
   return (
-    <>
-      <form onSubmit={handelFormSubmit} className="contact-form w-full">
-        <div className="mb-4 flex w-full flex-wrap gap-4 md:flex-nowrap">
-          <NextUiInput
-            label="First name"
-            placeholder="John"
-            value={formData.firstName}
-            onChange={(e) => {
-              setFormData({
-                ...formData,
-                firstName: e.target.value,
-              });
-            }}
-          />
-          <NextUiInput
-            label="Last name"
-            placeholder="Doe"
-            value={formData.lastName}
-            onChange={(e) => {
-              setFormData({
-                ...formData,
-                lastName: e.target.value,
-              });
-            }}
-          />
-        </div>
-        <div className="mb-4">
-          <NextUiInput
-            label="Email"
-            placeholder="example@email.com"
-            className="text-lg"
-            value={formData.email}
-            onChange={(e) => {
-              setFormData({
-                ...formData,
-                email: e.target.value,
-              });
-            }}
-          />
-        </div>
-        <div className="mb-4">
-          <NextUiTextarea
-            label="Your message"
-            placeholder="Enter your question or message"
-            minRows={10}
-            value={formData.message}
-            onChange={(e) => {
-              setFormData({
-                ...formData,
-                message: e.target.value,
-              });
-            }}
-          />
-        </div>
-        <ShineButton text="Submit" type={'submit'} />
-        {/* <button className="h-[40px] text-[1.6rem]" type="submit">
-          Submit
-        </button> */}
-      </form>
-    </>
+    <form className="contact-form" onSubmit={submit} aria-busy={state === "sending"}>
+      <div className="honeypot" aria-hidden="true"><label htmlFor="website">Leave this field empty</label><input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" /></div>
+      <p className="form-note">All fields are required.</p>
+      <div className="form-row">
+        <div className="field"><label htmlFor="first-name">First name</label><input id="first-name" name="firstName" autoComplete="given-name" required maxLength={100} /></div>
+        <div className="field"><label htmlFor="last-name">Last name</label><input id="last-name" name="lastName" autoComplete="family-name" required maxLength={100} /></div>
+      </div>
+      <div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" required maxLength={254} /></div>
+      <div className="field"><label htmlFor="message">Your message</label><textarea id="message" name="message" rows={5} required maxLength={5000} aria-describedby="message-hint" /><p id="message-hint" className="field-hint">What would you like to build or improve? A few sentences are enough.</p></div>
+      <button className="button button-primary" type="submit" disabled={state === "sending"}>{state === "sending" ? "Sending…" : "Send message"}<span aria-hidden="true">↗</span></button>
+      <div className={"form-status " + state} role={state === "error" ? "alert" : "status"} aria-live={state === "error" ? "assertive" : "polite"}>{message}</div>
+    </form>
   );
-};
-
-export default ContactForm;
+}
