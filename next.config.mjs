@@ -1,8 +1,7 @@
+import { withBotId } from "botid/next/config";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['ansubkhan.com'],
-    },
+  images: { remotePatterns: [{ protocol: "https", hostname: "ansubkhan.com" }] },
 };
-
-export default nextConfig;
+export default withBotId(nextConfig);
