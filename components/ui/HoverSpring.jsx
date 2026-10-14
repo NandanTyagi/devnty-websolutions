@@ -4,6 +4,22 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const ProjectsData = [
+  {
+    id: 11,
+    name: "Aqtive.se",
+    description:
+      "Discover activities near you. A shared platform connecting participants with local organisers and their activities.",
+    link: "https://aqtive.se",
+    image: "/logos/aqtive-icon.svg",
+  },
+  {
+    id: 3,
+    name: "Streaker.ai",
+    description:
+      "A discipline ledger that makes continuity visible. Record your daily actions and see your consistency over time.",
+    link: "https://www.streaker.ai",
+    image: "/logos/streaker-icon.png",
+  },
   // {
   //   id: 1,
   //   name: "Borealissummit.com",
@@ -20,19 +36,12 @@ const ProjectsData = [
     link: "https://www.ungtledarskap.se",
     image: "/logos/ksul-logo-centered.svg",
   },
-  // {
-  //   id: 3,
-  //   name: "Streaker.ai",
-  //   description: "Track the things you want to track. Simple and easy!",
-  //   link: "https://www.streaker.ai/about",
-  //   image: "/logos/streaker-logo.svg",
-  // },
   {
     id: 4,
     name: "Embla",
     description:
       "AI-powered meditation platform that offers personalized meditation guidance tailored to your unique needs and preferences..",
-    link: "https://www.embla.ai/about",
+    link: "https://www.embla.ai",
     image: "/logos/favicon-sprout.svg",
   },
   // {
