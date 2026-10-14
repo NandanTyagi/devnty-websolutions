@@ -3,7 +3,7 @@ import { setTimeout } from 'node:timers/promises';
 
 const port = '3100';
 const base = `http://localhost:${port}`;
-const server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '-H', '127.0.0.1', '-p', port], { stdio: 'inherit' });
+const server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '-H', 'localhost', '-p', port], { stdio: 'inherit' });
 try {
   let ready = false;
   for (let i = 0; i < 60; i++) {
