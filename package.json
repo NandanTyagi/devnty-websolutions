@@ -6,23 +6,28 @@
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:smoke": "node scripts/smoke.mjs",
+    "test:ci": "node scripts/test-ci.mjs"
+  },
+  "engines": {
+    "node": "22.x"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.4.1",
     "@react-three/drei": "^9.50.3",
     "@react-three/fiber": "^8.9.2",
-    "@nextui-org/react": "^2.4.1",
     "@vercel/analytics": "^1.0.2",
     "framer-motion": "^11.2.10",
+    "next": "14.2.35",
     "nodemailer": "^6.9.4",
-    "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "three": "^0.148.0"
   },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "14.2.3",
+    "eslint-config-next": "14.2.35",
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.6.1",
     "tailwindcss": "^3.4.1"

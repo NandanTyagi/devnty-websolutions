@@ -1,0 +1,21 @@
+name: Deployment smoke
+on:
+  deployment_status:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm run test:smoke
+        env:
+          SMOKE_BASE_URL: https://www.devnty.com
+          EXPECTED_COMMIT: ${{ github.event.deployment.sha }}
