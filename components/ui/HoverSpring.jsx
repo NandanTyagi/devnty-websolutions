@@ -82,13 +82,6 @@ const ProjectsData = [
   //   link: "http://askthevedas.on.devnty.com",
   //   image: "/logos/vedas-logo-min.svg",
   // },
-  {
-    id: 10,
-    name: "Askthequran.ai",
-    description: "Discover the ancient wisdom of the Quran.",
-    link: "https://www.askthequran.ai",
-    image: "/logos/quran-logo.svg",
-  },
   // {
   //   id: 10,
   //   name: "Asktheqbible.ai",
